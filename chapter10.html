@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SQL Unions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body background="blue.jpg">
+    <header>
+      <h1>SQL Unions</h1>
+      <nav>
+        <a href="#union">UNION</a>
+        <a href="#union-all">UNION ALL</a>
+      </nav>
+    </header>
+    <main>
+      <section id="union">
+        <h2>UNION</h2>
+        <p>The <code>UNION</code> command is used to combine the result sets of two or more SELECT statements into a single result set. The columns in each SELECT statement must be of the same data type, and they must appear in the same order:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1
+UNION
+SELECT column_name(s)
+FROM table2;</code></pre>
+      </section>
+      <section id="union-all">
+        <h2>UNION ALL</h2>
+        <p>The <code>UNION ALL</code> command is similar to the <code>UNION</code> command, except that it includes all rows, including duplicates:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1
+UNION ALL
+SELECT column_name(s)
+FROM table2;</code></pre>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 SQL Unions Website</p>
+    </footer>
+  </body>
+</html>

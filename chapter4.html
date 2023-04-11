@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>Pattern matching and clauses</title>
+</head>
+<body background="blue.jpg">
+<b><h1 style ="color:red;">  Pattern Matching(Like operator)</h1><br>
+<b>The SQL LIKE Operator</b>
+<br>The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.
+
+There are two wildcards often used in conjunction with the LIKE operator:
+
+<br> The percent sign (%) represents zero, one, or multiple characters
+ <br>The underscore sign (_) represents one, single character
+
+<br>The percent sign and the underscore can also be used in combinations!
+
+<br><b>LIKE Syntax</b>
+SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern;
+Tip: You can also combine any number of conditions using AND or OR operators.
+
+<br><b>Here are some examples showing different LIKE operators with '%' and '_' wildcards:</b>
+
+<br>LIKE Operator	Description
+<br>WHERE CustomerName LIKE 'a%'	 Finds any values that start with "a"
+<br>WHERE CustomerName LIKE '%a'	Finds any values that end with "a"
+<br>WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+<br>WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+<br>WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+<br>WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+<br>WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o" </p></b>
+
+<h1> Clauses</h1><br>
+In SQL we have number of clauses(conditions) such as
+<br> Where
+<br>Order by
+<br> Group by
+<br> Having
+<br> Let's discuss them one by one
+<br><b><p style="color:blue; font-size:25px;">Where clause</b></p>
+<br>The WHERE clause is used to filter records.
+
+<br>It is used to extract only those records that fulfill a specified condition.
+
+<br><b>WHERE Syntax</b>
+<br>SELECT column1, column2, ...
+<br>FROM table_name
+<br>WHERE condition;
+<br>Note: The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!
+<br><b>WHERE Clause Example</b>
+<br>The following SQL statement selects all the customers from the country "Mexico", in the "Customers" table:
+
+<br>Example
+<br>SELECT * FROM Customers
+<br>WHERE Country='Mexico';
+<br><b>Operators in The WHERE Clause</b>
+<br>The following operators can be used in the WHERE clause:
+
+<br>Operator	Description	Example
+<br>=	Equal	
+<br>>	Greater than	
+<br><	Less than	
+<br>>=	Greater than or equal	
+<br><=	Less than or equal	
+<br><>	Not equal. Note: In some versions of SQL this operator may be written as !=	
+<br>BETWEEN	Between a certain range	
+<br>LIKE	Search for a pattern	
+<br>IN	To specify multiple possible values for a column
+<br><b><p style="color:blue; font-size:25px;">Order by clause</b></p>
+<br>The ORDER BY keyword is used to sort the result-set in ascending or descending order.
+
+The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
+
+<br><b>ORDER BY Syntax</b>
+<br>SELECT column1, column2, ...
+<br>FROM table_name
+<br>ORDER BY column1, column2, ... ASC|DESC;
+<br> <b>ORDER BY Example</b>
+<br>The following SQL statement selects all customers from the "Customers" table, sorted by the "Country" column:
+
+<br>ExampleGet your own SQL Server
+<br?SELECT * FROM Customers
+<br>ORDER BY Country;
+<br><b><p style="color:blue; font-size:25px;">Group by clause</b></p>
+<br>This clause is used for making groups of the data we cannot use group by Clause if we don't
+ use any group function( aggregate function ).
+<br> group functions work on multiple rows 
+and return only one row.
+<br><b> Group functions</b>
+<br> minimum: Returns the minimum values from the given column.
+<br> maximum:Returns the maximum values from the given column.
+<br> sum:sum returns the addition of the data of the given column.
+<br> average:It returns the average of the given column.
+<br> count:Count returns the counting of that column ignoring null values.
+<br> count(*): It returns the number of rows existing in the table.
+<br><b> Syntax</b>
+<br> select groupfunc(colname)from tablename;
+<br><b>Syntax of groupby </b>
+<br>select colname ,groupfunc from tablename group by colnmame;
+<br><b>Example </b>
+<br>select age,count(age)from student group by age;
+<br><b><p style="color:blue; font-size:25px;">Having clause</b></p>
+<br>The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+
+<br><b>HAVING Syntax</b>
+<br>SELECT column_name(s)
+<br>FROM table_name
+<br>WHERE condition
+<br>GROUP BY column_name(s)
+<br>HAVING condition
+<br>ORDER BY column_name(s);
+<br><b>Example</b>
+<br>The following SQL statement lists the number of customers in each country. Only include countries with more than 5 customers:
+<br>SELECT COUNT(CustomerID), Country
+<br>FROM Customers
+<br>GROUP BY Country
+<br>HAVING COUNT(CustomerID) > 5;<br><br>
+</body>
+</html>

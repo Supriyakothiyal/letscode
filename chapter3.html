@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>Dml and Dqlcommands</title>
+</head>
+<body background="blue.jpg">
+<b><p style ="font-size:35px; color:red ;"> DML commands</p></b>
+
+DML stands for Data Manipulation Language. Tables and formulas are helpful when communicating with data stored up to a point in a database through SQL, but a time comes when we actually want to execute some fairly complicated data interactions. We will also need the Data Manipulation Language in that situation. DML is a way to inform a database precisely what we want it to do by conversing in a manner that it has been built to comprehend from the scratch. When it comes to interacting within existing data, whether adding, moving, or deleting data, it provides a convenient way to do so.
+
+<br>Data Manipulation Language (DML) commands are as follows:
+<br><p style="color:blue; font-size:25px;">INSERT Command – </p>
+<br>This command is used to enter the information or values into a row. We can connect one or more records to a single table within a repository using this instruction. This is often used to connect an unused tag to the documents.
+<br><b>Syntax :</b>
+
+<br><INSERT INTO <table_name> ('column_name1' <datatype>, 'column_name2' <datatype>)
+
+<br>VALUES ('value1', 'value2'); 
+<br><b>Example :</b>
+
+<br>INSERT INTO students ('stu_id' int, 'stu_name' varchar(20), 'city' varchar(20))
+
+<br>VALUES ('1', 'Nirmit', 'Gorakhpur'); 
+<br><p style="color:blue; font-size:25px;">UPDATE Command –</p>
+<br>This command is used to alter existing table records. Within a table, it modifies data from one or more records. This command is used to alter the data which is already present in a table.
+<br><b>Syntax :</b>
+
+<br>UPDATE <table_name>
+
+<br>SET <column_name = value>
+
+<br>WHERE condition; 
+<br><b>Example :</b>
+
+UPDATE students
+
+SET due_fees = 20000
+
+WHERE stu_name = 'Mini'; 
+<br><p style="color:blue; font-size:25px;">DELETE Command –</p>
+<br>It deletes all archives from a table. This command is used to erase some or all of the previous table’s records. If we do not specify the ‘WHERE’ condition then all the rows would be erased or deleted.
+<br><b>Syntax :</b>
+
+<br>DELETE FROM <table_name>
+
+<br>WHERE <condition>; 
+<br><b>Example :</b>
+
+<br>DELETE FROM students
+
+<br>WHERE stu_id = '001'; 
+<br>><b><p style ="font-size:35px; color:red ;"> DQL commands</p></b>
+
+
+<br>DQL commands are used for fetching data from a relational database. They perform read-only queries of data. The only command, 'SELECT' is equivalent to the projection operation in relational algebra. It command selects the attribute based on the condition described by the WHERE clause and returns them.
+
+Select is one of the most important SQL commands. It is used to retrieve data from a database. One can fetch either the entire table or some data according to specified rules. The data returned is stored in a result table. With the SELECT clause of a SELECT command statement, we specify the columns that we want to be displayed in the query result and, optionally, which column headings we prefer to see above the result table.
+
+The select clause is the first clause and is one of the last clauses of the select statement that the database server evaluates. The reason for this is that before we can determine what to include in the final result set, we need to know all of the possible columns that could be included in the final result set.
+
+<br><b>Syntax :</b>
+<br>SELECT column1 as c1
+column2 as c2
+...
+from table_name;
+<br><b>Example</b>
+<br>If a user wants to retrieve all the from the employee table, the query must be given as follows: 
+ 
+
+select *
+from employee;  
+asterisk mark (*) indicates that all the rows are retrieved from the table. <br>
+
+</body>
+</html>
+

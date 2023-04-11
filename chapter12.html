@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction to PL/SQL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body background="blue.jpg">
+    <header>
+      <h1>Introduction to PL/SQL</h1>
+      <nav>
+        <a href="#what-is-plsql">What is PL/SQL?</a>
+        <a href="#plsql-block-structure">PL/SQL Block Structure</a>
+        <a href="#variables">Variables</a>
+        <a href="#control-structures">Control Structures</a>
+        <a href="#exceptions">Exceptions</a>
+      </nav>
+    </header>
+    <main>
+      <section id="what-is-plsql">
+        <h2>What is PL/SQL?</h2>
+        <p>PL/SQL is a procedural language designed specifically for the Oracle Database Management System. It is an extension of SQL that provides procedural features such as variables, control structures, and exception handling. PL/SQL can be used to create stored procedures, functions, triggers, and packages.</p>
+      </section>
+      <section id="plsql-block-structure">
+        <h2>PL/SQL Block Structure</h2>
+        <p>A PL/SQL block is a unit of code that is executed as a single unit. It consists of three parts:</p>
+        <ul>
+          <li>DECLARE: This part declares variables and cursors that are used in the block.</li>
+          <li>BEGIN: This part contains the actual executable code.</li>
+          <li>EXCEPTION: This part handles any exceptions that occur during the execution of the block.</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>DECLARE
+  variable_name1 data_type1;
+  variable_name2 data_type2;
+BEGIN
+  -- Executable code goes here
+EXCEPTION
+  -- Exception handling code goes here
+END;</code></pre>
+      </section>
+      <section id="variables">
+        <h2>Variables</h2>
+        <p>PL/SQL variables are used to store data values that can be manipulated during the execution of the block. Variables must be declared in the DECLARE section of the block. There are four types of variables in PL/SQL:</p>
+        <ul>
+          <li>Scalar variables: Store single values of a specific data type.</li>
+          <li>Cursor variables: Store pointers to query result sets.</li>
+          <li>Record variables: Store data from multiple columns or tables.</li>
+          <li>Boolean variables: Store true or false values.</li>
+        </ul>
+      </section>
+      <section id="control-structures">
+        <h2>Control Structures</h2>
+        <p>PL/SQL control structures are used to control the flow of execution in the block. There are three types of control structures in PL/SQL:</p>
+        <ul>
+          <li>Conditional statements: IF, CASE</li>
+          <li>Looping statements: LOOP, WHILE, FOR</li>
+          <li>Exception handling statements: EXCEPTION, RAISE</li>
+        </ul>
+      </section>
+      <section id="exceptions">
+        <h2>Exceptions</h2>
+        <p>PL/SQL exceptions are used to handle errors that occur during the execution of the block. Exceptions can be predefined or user-defined. Pre
+defined exceptions are errors that are already defined by Oracle, while user-defined exceptions are errors that are defined by the programmer. When an exception occurs, the PL/SQL block stops executing and control is transferred to the exception handling section of the block.</p>
+</section>
+</main>
+<footer>
+<p>© 2023 Your Company. All rights reserved.</p>
+</footer>
+
+  </body>
+</html>

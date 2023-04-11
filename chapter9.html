@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SQL Joins</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body background="blue.jpg">
+    <header>
+      <h1>SQL Joins</h1>
+      <nav>
+        <a href="#inner-join">INNER JOIN</a>
+        <a href="#left-join">LEFT JOIN</a>
+        <a href="#right-join">RIGHT JOIN</a>
+        <a href="#full-join">FULL JOIN</a>
+        <a href="#self-join">SELF JOIN</a>
+      </nav>
+    </header>
+    <main>
+      <section id="inner-join">
+        <h2>INNER JOIN</h2>
+        <p>The <code>INNER JOIN</code> command is used to combine rows from two or more tables based on a matching column:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;</code></pre>
+      </section>
+      <section id="left-join">
+        <h2>LEFT JOIN</h2>
+        <p>The <code>LEFT JOIN</code> command returns all rows from the left table and matching rows from the right table. If there is no match, NULL values are used for the right table's columns:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;</code></pre>
+      </section>
+      <section id="right-join">
+        <h2>RIGHT JOIN</h2>
+        <p>The <code>RIGHT JOIN</code> command returns all rows from the right table and matching rows from the left table. If there is no match, NULL values are used for the left table's columns:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;</code></pre>
+      </section>
+      <section id="full-join">
+        <h2>FULL JOIN</h2>
+        <p>The <code>FULL JOIN</code> command returns all rows from both tables. If there is no match, NULL values are used for the missing columns:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table2.column_name;</code></pre>
+      </section>
+      <section id="self-join">
+        <h2>SELF JOIN</h2>
+        <p>The <code>SELF JOIN</code> command is used to join a table with itself:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE T1.column_name = T2.column_name
+AND T1.column_name = value;</code></pre>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 SQL Joins Website</p>
+    </footer>
+  </body>
+</html>

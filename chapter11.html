@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nested Queries in SQL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body background="blue.jpg">
+    <header>
+      <h1>Nested Queries in SQL</h1>
+      <nav>
+        <a href="#subquery">Subquery</a>
+        <a href="#correlated-subquery">Correlated Subquery</a>
+      </nav>
+    </header>
+    <main>
+      <section id="subquery">
+        <h2>Subquery</h2>
+        <p>A subquery is a SELECT statement that is nested within another SELECT statement or another SQL statement, such as an UPDATE, DELETE, or INSERT statement. It can be used to return a single value, a single row, or multiple rows. A subquery must be enclosed in parentheses and placed in the WHERE clause or the HAVING clause:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name(s)
+FROM table_name
+WHERE column_name IN (SELECT column_name FROM table_name WHERE condition);</code></pre>
+      </section>
+      <section id="correlated-subquery">
+        <h2>Correlated Subquery</h2>
+        <p>A correlated subquery is a subquery that depends on the outer query for its values. It is used to compare values from the outer query with values from the inner query. A correlated subquery must be enclosed in parentheses and placed in the WHERE clause:</p>
+        <p>Example:</p>
+        <pre><code>SELECT column_name
+FROM table_name t1
+WHERE condition = (SELECT MAX(column_name) FROM table_name t2 WHERE t1.column_name = t2.column_name);</code></pre>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 Nested Queries in SQL Website</p>
+    </footer>
+  </body>
+</html>

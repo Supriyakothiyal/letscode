@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SQL Grant, Revoke, Commit, Rollback</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body background="blue.jpg">
+    <header>
+      <h1>SQL Grant, Revoke, Commit, Rollback</h1>
+      <nav>
+        <a href="#grant">GRANT</a>
+        <a href="#revoke">REVOKE</a>
+        <a href="#commit">COMMIT</a>
+        <a href="#rollback">ROLLBACK</a>
+      </nav>
+    </header>
+    <main>
+      <section id="grant">
+        <h2>GRANT</h2>
+        <p>The <code>GRANT</code> command is used to grant privileges to users:</p>
+        <ul>
+          <li><code>GRANT SELECT ON table_name TO user_name;</code> - Grants the SELECT privilege on a table to a user.</li>
+          <li><code>GRANT INSERT ON table_name TO user_name;</code> - Grants the INSERT privilege on a table to a user.</li>
+          <li><code>GRANT UPDATE ON table_name TO user_name;</code> - Grants the UPDATE privilege on a table to a user.</li>
+          <li><code>GRANT DELETE ON table_name TO user_name;</code> - Grants the DELETE privilege on a table to a user.</li>
+          <li><code>GRANT ALL PRIVILEGES ON table_name TO user_name;</code> - Grants all privileges on a table to a user.</li>
+        </ul>
+      </section>
+      <section id="revoke">
+        <h2>REVOKE</h2>
+        <p>The <code>REVOKE</code> command is used to revoke privileges from users:</p>
+        <ul>
+          <li><code>REVOKE SELECT ON table_name FROM user_name;</code> - Revokes the SELECT privilege on a table from a user.</li>
+          <li><code>REVOKE INSERT ON table_name FROM user_name;</code> - Revokes the INSERT privilege on a table from a user.</li>
+          <li><code>REVOKE UPDATE ON table_name FROM user_name;</code> - Revokes the UPDATE privilege on a table from a user.</li>
+          <li><code>REVOKE DELETE ON table_name FROM user_name;</code> - Revokes the DELETE privilege on a table from a user.</li>
+          <li><code>REVOKE ALL PRIVILEGES ON table_name FROM user_name;</code> - Revokes all privileges on a table from a user.</li>
+        </ul>
+      </section>
+      <section id="commit">
+        <h2>COMMIT</h2>
+        <p>The <code>COMMIT</code> command is used to save changes made to the database:</p>
+        <ul>
+          <li><code>COMMIT;</code> - Saves changes made to the database.</li>
+        </ul>
+      </section>
+      <section id="rollback">
+        <h2>ROLLBACK</h2>
+        <p>The <code>ROLLBACK</code> command is used to undo changes made to the database:</p>
+        <ul>
+          <li><code>ROLLBACK;</code> - Undoes changes made to the database.</li>
+    </ul>
+  </section>
+</main>
+<footer>
+  <p>&copy; 2023 SQL Grant, Revoke, Commit, Rollback Website</p>
+</footer>
+</body>
+</html>
+
+       
