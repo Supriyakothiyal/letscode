@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SQL for Beginners</title>
+ <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body background="gbg.png">
+
+    <div class="heading">
+<h1 class="head" align="center">Let's Code</h1>
+</div>
+<header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+      
+        <ul>
+          <li><a href="#chapter1">What is SQL?</a></li>
+          <li><a href="chapter2.html"> DDL Commands</a></li>
+          <li><a href="chapter3.html">DML and DQL commands</a></li>
+          <li><a href="chapter4.html">Pattern matching and clauses</a></li>
+          <li><a href="chapter5.html">Views</a></li>
+          <li><a href="chapter6.html">Date functions</a></li>
+          <li><a href="chapter7.html">Character functions</a></li>
+          <li><a href="chapter8.html">DCL commands</a></li>
+          <li><a href="chapter9.html">Joins</a></li>
+          <li><a href="chapter10.html">Unions</a></li>
+          <li><a href="chapter12.html">PL/SQL</a></li>
+        </ul>
+      
+   
+    <main>
+      <section id="chapter1">
+        <h2>What is SQL?</h2>
+        <p>SQL stands for Structured Query Language is a standard database language that is used to create, maintain and retrieve data from relational databases like MySQL, Oracle, SQL Server, PostGre, etc. The recent ISO standard version of SQL is SQL:2019.
+
+As the name suggests, it is used when we have structured data (in the form of tables). All databases that are not relational (or do not use fixed structure tables to store data) and therefore do not use SQL, are called NoSQL databases. Examples of NoSQL are MongoDB, DynamoDB, Cassandra, etc.</p>
+      </section>
+      <section id="chapter2">
+        <h2>Basic SQL Syntax</h2>
+        <p>SQL statements are made up of clauses that specify the data to be retrieved or modified. The basic structure of a SQL statement is:</p>
+        <pre>
+        <code>SELECT column1, column2, ...
+        FROM table_name
+        WHERE condition;
+        </code>
+        </pre>
+      </section>
+      <section id="chapter3">
+        <h2>Retrieving Data</h2>
+        <p>The SELECT statement is used to retrieve data from a database. It allows users to specify which columns they want to retrieve, as well as filter the results using WHERE clauses. For example:</p>
+        <pre>
+        <code>SELECT first_name, last_name
+        FROM employees
+        WHERE salary > 50000;
+        </code>
+        </pre>
+      </section>
+      <!-- other chapters here -->
+    </main>
+    <footer>
+      <p>&copy; 2023 SQL for Beginners</p>
+
+  </body>
+</html>
